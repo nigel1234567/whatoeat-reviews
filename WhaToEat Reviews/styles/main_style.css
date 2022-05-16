@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+}
+
+.header {
+  font-size: 24px;
+  background-color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-weight: bolder;
+  font-family: Rockwell, 'Times New Roman', Times, serif;
+}
+
+.header .options-header {
+  padding: 30px 24px;
+  border: 3px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .profile-header {
+  border: 3px solid blue;
+  padding: 20px 24px;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .profile-header .reputation {
+  border: 3px solid green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.header .profile-header .profile {
+  border: 3px solid yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 12px;
+}
+
+.header .profile-header .profile img {
+  border-radius: 50%;
+  height: 50px;
+}
+/*# sourceMappingURL=main_style.css.map */
