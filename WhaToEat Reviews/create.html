@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/create_style.css">
+    <title>Create New</title>
+</head>
+<body>
+    <div class="header">
+        <div class="options-header">
+            <a href="/index.html" class="option recommend">Recommend</a>
+            <div class="option logbook">Logbook</div>
+            <div class="option favorites">Favorites</div>
+            <div class="option food-picker">Food Picker</div>
+        </div>
+        <div class="profile-header">
+            <div class="reputation"><svg style="width:40px;height:40px" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5M19 19C19 19.6 18.6 20 18 20H6C5.4 20 5 19.6 5 19V18H19V19Z" />
+            </svg><span class="points">0</span></div> 
+            <div class="profile">
+                <img src="img/panda_workshop_dark_icon.PNG" alt="user_logo">
+                <p>Name</p>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="sidebar">
+            <p>To Recommend</p>
+            <div class="sidebar-items">
+            </div>
+        </div>
+        <div class="main">
+            <p>Create New Visit</p>
+            <div class="main-menu">
+                <form action="" method="post" class="create">
+                    <!-- Image -->
+                    <div class="image">
+                        <label for="img" class="upload_image">Upload image:</label>
+                        <input type="file" accept="image/*" onchange="loadFile(event)">
+                        <img id="output" alt="No image" width="100" height="100"/>
+                        <script>
+                        var loadFile = function(event) {
+                            var output = document.getElementById('output');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                            output.onload = function() {
+                            URL.revokeObjectURL(output.src) // free memory
+                            }
+                        };
+                        </script>
+                    </div>
+                    
+                    <!-- Details -->
+                    <div class="details">
+                        <label for="name">Enter name: </label>
+                        <input type="text" name="name" id="name">
+
+                        <label for="location">Enter location: </label>
+                        <input type="text" name="location" id="location">
+
+                        <label for="datetime">Enter date and time of visit: </label>
+                        <input type="datetime-local" id="datetime"
+                            name="datetime">
+
+                        <!-- To create tags input script: https://www.youtube.com/watch?v=I7tEO857I3c -->
+                        <label for="tags">Enter some tags (separated by commas):</label>
+                        <textarea name="tags" id="tags" cols="40" rows="3"></textarea>
+
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="sidebar">
+            <p>To Review</p>
+            <div class="sidebar-items">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
